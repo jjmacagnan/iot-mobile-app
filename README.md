@@ -68,7 +68,7 @@ npm run web
 - Ao abrir o app, insira a **URL do Firebase Realtime Database** (ex: `https://seu-projeto.firebaseio.com`) e o **ID do dispositivo** (ex: `device_001`).
 - Toque em **Conectar** para carregar dados do dispositivo e controlar atuadores.
 
-### Estrutura esperada no Firebase
+## 🔁 Estrutura esperada no Firebase
 
 ```json
 {
@@ -114,6 +114,16 @@ npm run web
   }
 }
 ```
+> Observação: Para testes rápidos, ajuste as regras do Realtime Database para permitir leitura/escrita (não recomendado em produção). Exemplo mínimo de regra para testes:
+>
+> {
+>   "rules": {
+>     ".read": true,
+>     ".write": true
+>   }
+> }
+
+---
 
 - O app usa requisições HTTP (REST do Firebase). Atualizações de atuadores e settings são feitas via `PUT` diretamente nos caminhos:
   - `/devices/{deviceId}/actuators/{actuator}/{field}.json`
