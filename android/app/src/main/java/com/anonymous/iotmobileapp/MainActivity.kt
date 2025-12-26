@@ -1,4 +1,4 @@
-package com.iotmobileapp
+package com.anonymous.iotmobileapp
 
 import android.os.Build
 import android.os.Bundle
